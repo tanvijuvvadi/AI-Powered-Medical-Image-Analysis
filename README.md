@@ -1,94 +1,67 @@
-# AI Medical Image Analysis
+# MedVision AI — AI-Powered Medical Image Analysis
 
-## Overview
+A responsive, GitHub Pages-ready educational website for a student computer-vision project exploring chest X-ray classification workflows and responsible AI.
 
-AI Medical Image Analysis is a web-based prototype designed to demonstrate how artificial intelligence can support medical image visualization and analysis. The project provides a simple, interactive interface for exploring medical images, understanding an AI-assisted analysis workflow, and reviewing illustrative model evaluation metrics.
-
-The website is developed as a frontend prototype for educational and demonstration purposes.
-
-## Objectives
-
-- Build a responsive and user-friendly medical AI website.
-- Allow users to upload and preview an image locally in the browser.
-- Demonstrate a sample AI-assisted medical image analysis workflow.
-- Present illustrative model evaluation metrics.
-- Explain responsible AI practices in healthcare.
-- Create a foundation for future integration with a trained machine learning model.
+> **Safety notice:** This repository currently contains a front-end prototype only. The image result is randomly simulated; it is not produced by a trained model and must never be used for diagnosis, triage, or treatment decisions.
 
 ## Features
+- Responsive research dashboard and project overview
+- Local image preview for JPG, PNG, and WEBP files
+- Clearly labeled simulated output panel
+- AI pipeline explainer from public data through evaluation
+- Evaluation metric definitions and model validation checklist
+- Dataset, privacy, fairness, and limitation notes
+- No framework or build step required
 
-- **Interactive dashboard:** A clean interface for exploring the project.
-- **Image upload and preview:** Select an image and preview it in the browser.
-- **AI workflow demonstration:** Explore the stages of a typical image-analysis pipeline.
-- **Evaluation metrics:** View example performance indicators.
-- **Responsive design:** Supports desktop, tablet, and mobile screens.
-- **Responsible AI information:** Highlights the importance of human oversight, privacy, and appropriate clinical validation.
+## Run locally
+1. Download or clone this repository.
+2. Open `index.html` in a modern browser, or run a simple local server:
+   ```bash
+   python -m http.server 8000
+   ```
+3. Visit `http://localhost:8000`.
 
-## Technologies Used
-
-- HTML5 — webpage structure
-- CSS3 — styling and responsive layout
-- JavaScript — frontend interactions and image preview
-- Git and GitHub — version control and project hosting
-
-## Project Structure
-
+## Project files
 ```text
-ai-medical-image-analysis/
-├── index.html
-├── styles.css
-├── script.js
-├── README.md
-├── .gitignore
+AI-Medical-Image-Analysis/
+├── index.html      # Website structure and content
+├── styles.css      # Responsive styling
+├── script.js       # Local preview and explicitly simulated demo
+├── README.md       # Project documentation
+├── .gitignore      # Files excluded from Git
 └── docs/
     └── MODEL_INTEGRATION.md
 ```
 
-## Getting Started
+## Planned model integration
+A real research implementation could use a public, appropriately licensed chest X-ray dataset, TensorFlow/Keras CNN, patient-aware data splits, a held-out test set, and metrics such as sensitivity, specificity, precision, recall, F1, ROC-AUC, and a confusion matrix. Do not display performance values until the model has actually been trained and evaluated. See [`docs/MODEL_INTEGRATION.md`](docs/MODEL_INTEGRATION.md).
 
-### 1. Clone the repository
+## Dataset reference
+Kermany et al. pediatric chest X-ray dataset: https://data.mendeley.com/datasets/rscbjbr9sj/2. Review the dataset documentation and terms before use. Dataset composition and labels impose important limits on generalization.
 
+## Publish with GitHub Pages
+1. Create a public repository named `ai-medical-image-analysis`.
+2. Add `index.html`, `styles.css`, `script.js`, `README.md`, `.gitignore`, and `docs/`.
+3. Open **Settings → Pages**.
+4. Under build and deployment, choose **Deploy from a branch**, select `main` and `/ (root)`, then save.
+5. Wait for GitHub Pages to publish the site. The Pages URL appears in Settings → Pages.
+
+## Suggested Git commands
 ```bash
-git clone https://github.com/YOUR-USERNAME/ai-medical-image-analysis.git
+git init
+git add .
+git commit -m "Build responsive MedVision AI project website"
+git branch -M main
+git remote add origin https://github.com/YOUR-USERNAME/ai-medical-image-analysis.git
+git push -u origin main
 ```
+Replace `YOUR-USERNAME` with your GitHub username. If the repository already exists locally, do not run `git init` again.
 
-Replace `YOUR-USERNAME` with your GitHub username.
+## Responsible-use principles
+- Educational research only; not a medical device.
+- Never upload identifiable patient data to an unapproved service.
+- Do not interpret this demo's random label or confidence as clinical evidence.
+- A future real model needs robust validation, privacy/security controls, bias analysis, clinical oversight, and applicable regulatory review.
 
-### 2. Open the project folder
-
-```bash
-cd ai-medical-image-analysis
-```
-
-### 3. Run the website
-
-Open `index.html` in your web browser.
-
-For a better development experience, you can use the Live Server extension in Visual Studio Code.
-
-## How It Works
-
-1. Open the website in a browser.
-2. Select an image using the upload interface.
-3. Preview the selected image.
-4. Explore the sample analysis workflow and displayed metrics.
-5. Review the responsible AI information and future model integration documentation.
-
-**Important:** The current version is a frontend demonstration. Its sample analysis results and metrics are illustrative and are not generated by a trained medical AI model. It must not be used for diagnosis, treatment decisions, or real clinical assessment.
-
-## Future Enhancements
-
-- Integrate a validated medical image classification model.
-- Develop a backend API for model inference.
-- Support appropriate medical image formats.
-- Add secure data handling and user authentication where required.
-- Evaluate model performance using documented, representative datasets.
-- Assess bias, reliability, explainability, and clinical suitability.
-- Conduct appropriate security, privacy, and clinical validation before real-world use.
-
-## Responsible AI and Disclaimer
-
-This project is intended for educational and demonstration purposes only. It is not a medical device and does not provide medical diagnoses or treatment recommendations. All displayed sample results and metrics should be treated as illustrative unless independently validated.
-
-Medical images can contain sensitive personal information. Do not upload confidential patient data to an unvalidated demonstration website.
-
+## License
+Choose a license only after confirming the licensing of any data, model weights, and third-party assets you add. The original starter website code may be licensed under MIT if you choose to include an MIT license.
